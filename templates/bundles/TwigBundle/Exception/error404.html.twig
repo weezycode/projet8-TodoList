@@ -1,0 +1,31 @@
+{% extends "base-login.html.twig" %}
+{% block title %}
+404 : Not Found
+{% endblock %}
+{% block body %}
+<div class="container" style="height: 457px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="error-template text-center">
+				<h1>
+					Oops!</h1>
+				<h2>
+					404 Not found</h2>
+				<div class="error-details">
+					{% if exception %}
+					<p>{{ exception.message }}</p>
+					{% else %}
+					L'url
+					<p>{{ app.request.uri }} que vous recherchez n'existe pas !</p>
+					{% endif %}
+				</div>
+				<div class="error-actions">
+					<a href="{{ path('show_tricks') }}" class="btn btn-primary btn-lg"><span
+							class="glyphicon glyphicon-home"></span>
+						Back home</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

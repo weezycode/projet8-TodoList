@@ -1,0 +1,26 @@
+{% extends "base-login.html.twig" %}
+{% block title %}
+403 Forgotten
+{% endblock %}
+{% block body %}
+<div class="container" style="height: 457px;">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="error-template">
+				<h1>
+					Oops!</h1>
+				<h2>
+					403 Forgotten</h2>
+				<div class="error-details">
+					Sorry, problem server
+				</div>
+				<div class="error-actions">
+					<a href="{{ path('show_tricks') }}" class="btn btn-primary btn-lg"><span
+							class="glyphicon glyphicon-home"></span>
+						Back home</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
