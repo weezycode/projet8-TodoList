@@ -5,7 +5,7 @@
 ## If you would like to contribute to this project, please follow these steps.
 
 ## 1. Installation
-Please install the project following the instructions in the [[Readme.md file](https://github.com/weezycode/projet8-TodoList/edit/master/readme.md)](https://github.com/weezycode/projet8-TodoList/blob/master/README.md).
+Please install the project following the instructions in the [[Readme.md ](https://github.com/weezycode/projet8-TodoList/edit/master/readme.md)]
 
 ## 2. Create Branch
 Check the github documentation to create a branch or use this command
