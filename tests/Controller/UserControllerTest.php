@@ -2,17 +2,22 @@
 
 namespace App\Tests\Controller;
 
+use App\Entity\User;
 use Exception;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserControllerTest extends WebTestCase
 {
+
+
+
+
     public function testCreateAction(): void
     {
         $client = static::createClient();
         $userRepository = static::getContainer()->get(UserRepository::class);
-
         // retrieve the test user
         $testUser = $userRepository->findOneBy(['username' => 'Alpha']);
 

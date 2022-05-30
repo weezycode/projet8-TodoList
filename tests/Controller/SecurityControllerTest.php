@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Controller;
+namespace App\Tests\Controller;
 
 use Exception;
 use App\Repository\UserRepository;
@@ -29,11 +29,11 @@ class SecurityControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/');
         $link = $crawler->selectLink('Se déconnecter')->link();
         $client->click($link);
-
         $client->followRedirect();
         $this->assertResponseIsSuccessful();
-
         $this->assertStringContainsString('Se connecter', '' . $client->getResponse()->getContent());
+
+        // throw new Exception("Il n'y a pas de user de test pour se connecter", 1);
     }
 
     public function testLogin(): void
