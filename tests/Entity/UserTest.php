@@ -5,9 +5,25 @@ namespace App\Tests\Entity;
 use App\Entity\Task;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Liip\TestFixturesBundle\Services\DatabaseToolCollection;
+use Liip\TestFixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
 
 class UserTest extends KernelTestCase
 {
+
+    /**
+     * @var \Doctrine\ORM\EntityManager
+     * 
+     */
+    private $entityManager;
+
+    protected function setUp(): void
+    {
+        $kernel = self::bootKernel();
+        $this->entityManager = $kernel->getContainer()
+            ->get('doctrine')
+            ->getManager();
+    }
 
     public function task()
     {

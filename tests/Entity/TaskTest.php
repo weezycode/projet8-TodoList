@@ -4,6 +4,7 @@ namespace App\Tests\Entity;
 
 use App\Entity\Task;
 use App\Entity\User;
+use App\Repository\TaskRepository;
 use DateTimeImmutable;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -33,6 +34,7 @@ class TaskTest extends KernelTestCase
             ->setCreatedAt($this->date());
     }
 
+
     //get Error
     public function getErrorAssert(Task $task, int $nb = 0)
     {
@@ -41,6 +43,7 @@ class TaskTest extends KernelTestCase
         $error = self::getContainer()->get('validator')->validate($task);
         $this->assertCount($nb, $error);
     }
+
 
     //testing getter Title equal
     public function testGetTitle()
@@ -79,11 +82,14 @@ class TaskTest extends KernelTestCase
     }
 
 
+
     // test valid entity 
     public function testValidEntity()
     {
         $this->getErrorAssert($this->getEntityTest(), 0);
     }
+
+
 
     //testing user null
     public function testUserNull()
