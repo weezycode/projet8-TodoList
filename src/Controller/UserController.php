@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\DataPersister\UserPersister;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
-use Doctrine\Persistence\ObjectManager;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,10 +19,12 @@ class UserController extends AbstractController
 {
     private $em;
     private $userRepository;
-    public function __construct(ManagerRegistry $em, UserRepository $userRepository)
+    private $persister;
+    public function __construct(ManagerRegistry $em, UserRepository $userRepository, UserPersister $persister)
     {
         $this->em = $em->getManager();
         $this->userRepository = $userRepository;
+        $this->persister = $persister;
     }
     /**
      * @Route("/users", name = "user_list")
@@ -39,7 +41,7 @@ class UserController extends AbstractController
     /**
      * @Route("/users/create", name="user_create")
      */
-    public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher): Response
+    public function createAction(Request $request): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
@@ -47,11 +49,7 @@ class UserController extends AbstractController
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $hashedPassword = $passwordHasher->hashPassword($user, $user->getPassword());
-            $user->setPassword($hashedPassword);
-            $this->em->persist($user);
-            $this->em->flush();
-            //dd($user);
+            $this->persister->addUser($form, $user);
             $this->addFlash('success', 'L\'utilisateur a été bien ajouté !');
             return $this->redirectToRoute('user_list');
         }
@@ -61,7 +59,7 @@ class UserController extends AbstractController
     /**
      * @Route("/users/{username}/edit", name="user_edit")
      */
-    public function editAction(Request $request, UserPasswordHasherInterface $passwordHasher, $username)
+    public function editAction(Request $request, $username)
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
@@ -69,11 +67,7 @@ class UserController extends AbstractController
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $hashedPassword = $passwordHasher->hashPassword($user, $user->getPassword());
-            $user->setPassword($hashedPassword);
-            $this->em->persist($user);
-            $this->em->flush();
-            //dd($user);
+            $this->persister->addUser($form, $user);
             $this->addFlash('success', 'L\'utilisateur a été bien modifié !');
             return $this->redirectToRoute('user_list');
         }
