@@ -16,5 +16,5 @@ Check the github documentation to create a branch or use this command
 
 ## 4. Améliorer votre application
 Follow good development practices
-    - Le [PSR-12](https://www.php-fig.org/psr/psr-12/)
-    - Les [bonnes pratiques de Symfony](https://symfony.com/doc/current/best_practices.html)
+  * Le [PSR-12](https://www.php-fig.org/psr/psr-12/)
+  * Les [bonnes pratiques de Symfony](https://symfony.com/doc/current/best_practices.html)
