@@ -18,3 +18,13 @@ Check the github documentation to create a branch or use this command
 Follow good development practices
   * The [PSR-12](https://www.php-fig.org/psr/psr-12/)
   * The [best pratices of Symfony](https://symfony.com/doc/current/best_practices.html)
+  
+## 5. Test your project
+You should write unit and functional tests through PHPUNIT in test, test/entity, test/repository and test/controller folders. Once the tests are written, you can check the result by running the command
+  
+      php bin/phpunit
+To generate the code coverage report run this command
+
+      php bin/phpunit --coverage-html public/test-coverage 
+A file will then be generated in Public\test-coverage\index.html to see the coverage rate.
+    
