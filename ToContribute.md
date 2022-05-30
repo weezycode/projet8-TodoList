@@ -27,4 +27,22 @@ To generate the code coverage report run this command
 
       php bin/phpunit --coverage-html public/test-coverage 
 A file will then be generated in Public\test-coverage\index.html to see the coverage rate.
+
+## 6. Make commits and push the project
+push your changes and commit them
+
+      git add .
+Or
+
+      git add --all
+Commit them
+
+      git commit -m "your comment"
+
+And push
+
+      git push origin dev
+      
+## 7. Make pull requests
+Make pull requests by validating your issues.
     
