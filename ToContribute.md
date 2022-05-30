@@ -6,3 +6,8 @@
 
 ## 1. Installation
 Please install the project following the instructions in the readme.md file.
+
+## 2. Create Branch
+Check the github documentation to create a branch or use this command
+
+      git checkout -b new-branch
