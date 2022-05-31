@@ -9,8 +9,7 @@ TodoList
 *My role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often speak of code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees.*
 
 ## *Description of the need*
-
-  ### *Corrections d'anomalies*
+   ### *Corrections d'anomalies*
 
 * *Only referenced clients can access the APIs. API clients must be authenticated via JWT*
 
