@@ -32,7 +32,7 @@ TodoList
 
 *After cloning the project, go to the folder*
 
-      cd projet-8-Todolist
+      cd projet8-Todolist
 
 *Now install the project*
 
