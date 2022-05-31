@@ -9,9 +9,18 @@ TodoList
 *My role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often speak of code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees.*
 
 ## *Description of the need*
-   ### *Corrections d'anomalies*
 
-* *Only referenced clients can access the APIs. API clients must be authenticated via JWT*
+### *1. Corrections d'anomalies*
+
+* *A task must be attached to a user*
+* *Choose a role for a user*
+
+### *2. Implementation of new features*
+
+* *Autorisation*
+* *Implementation of automated tests*
+* *Technical documentation*
+* *Code quality audit & application performance*
 
 ## Installation
 
@@ -19,11 +28,11 @@ TodoList
 
 *To install the project, open your terminal, copy the link and paste it in your development path or anywhere*
 
-      git clone https://github.com/weezycode/bilemo.git
+      git clone https://github.com/weezycode/projet8-TodoList.git
 
 *After cloning the project, go to the folder*
 
-      cd bilemo
+      cd projet-8-Todolist
 
 *Now install the project*
 
@@ -47,21 +56,26 @@ TodoList
 
       php bin/console server:run
       
-## *Documentation*
+ ## *Test a project*
+ 
+        php bin/phpunit
+ *Code Coverage*
+ 
+         php bin/phpunit --coverage-html public/test-coverage 
+      
+## *Go to app*
 
- *documentation =>  https://localhost:8000/api/docs*   
+ *[login](https://localhost:8000)*   
 
 
-*If you want a token login with :* 
+*login Admin:* 
 
-*Email*
+*username*
 
-    mauritel@shop.fr
+    Alpha
 *Password* 
 
     pass_1234
     
 *Enjoy* 😃
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bba402e9b31e41558192a8af4b8c0e3b)](https://www.codacy.com/gh/weezycode/bilemo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=weezycode/bilemo&amp;utm_campaign=Badge_Grade)
 
