@@ -5,6 +5,8 @@ TodoList
 
 ## *A startup whose core business is an application to manage daily tasks*.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/346f73c9695f4fa6a0dd877b0a49d481)](https://app.codacy.com/gh/weezycode/projet8-TodoList?utm_source=github.com&utm_medium=referral&utm_content=weezycode/projet8-TodoList&utm_campaign=Badge_Grade_Settings)
+
 *The company has just been created, and the application had to be developed at full speed to show potential investors that the concept is viable (we are talking about Minimum Viable Product or MVP).*
 *My role here is therefore to improve the quality of the application. Quality is a concept that encompasses many subjects: we often speak of code quality, but there is also the quality perceived by the user of the application or the quality perceived by the company's employees.*
 
