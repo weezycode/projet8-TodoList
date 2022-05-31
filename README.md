@@ -10,7 +10,7 @@ TodoList
 
 ## *Description of the need*
 
-### *1. Corrections d'anomalies*
+### *1. Bug fixes*
 
 * *A task must be attached to a user*
 * *Choose a role for a user*
