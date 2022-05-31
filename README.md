@@ -37,7 +37,7 @@ TodoList
 *Now install the project*
 
       composer install
-## *Create the database mysql or other and update the .ENV file for the database connection * 
+## *Create the database mysql or other and update the .ENV file for the database connection* 
 
 
 ### :warning:  *if you don't have the Symfony CLIENT use  "php bin/console" instead "symfony console"*
