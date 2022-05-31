@@ -79,3 +79,5 @@ TodoList
     
 *Enjoy* 😃
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/29fd84eafae94646bc785977a34b43a1)](https://www.codacy.com/gh/weezycode/projet8-TodoList/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=weezycode/projet8-TodoList&amp;utm_campaign=Badge_Grade)
+
