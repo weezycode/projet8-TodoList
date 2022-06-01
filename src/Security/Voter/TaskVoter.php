@@ -18,7 +18,9 @@ class TaskVoter extends Voter
     {
         $this->security = $security;
     }
-
+    /**
+     * @codeCoverageIgnore
+     */
     protected function supports(string $attribute, $subject): bool
     {
         // if the attribute isn't one we support, return false
@@ -27,19 +29,24 @@ class TaskVoter extends Voter
         }
 
         // only vote on `Task` objects
+
         if (!$subject instanceof Task) {
+
             return false;
         }
 
         return true;
     }
-
+    /**
+     * @codeCoverageIgnore
+     */
     protected function voteOnAttribute(string $attribute, $subject, TokenInterface $token): bool
     {
         $user = $token->getUser();
 
         if (!$user instanceof User) {
             // the user must be logged in; if not, deny access
+
             return false;
         }
 

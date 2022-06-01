@@ -26,6 +26,7 @@ class UserController extends AbstractController
         $this->userRepository = $userRepository;
         $this->persister = $persister;
     }
+
     /**
      * @Route("/users", name = "user_list")
      */
