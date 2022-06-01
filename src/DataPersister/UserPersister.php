@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
+
 class UserPersister extends AbstractController
 {
     private $em;
@@ -19,7 +20,9 @@ class UserPersister extends AbstractController
         $this->em = $em->getManager();
         $this->passwordHasher = $passwordHasher;
     }
-
+    /**
+     * @codeCoverageIgnore
+     */
     public function addUser(FormInterface $form, User $user)
     {
 

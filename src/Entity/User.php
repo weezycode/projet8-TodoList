@@ -62,7 +62,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->tasks = new ArrayCollection();
     }
-
+    /**
+     * @codeCoverageIgnore
+     */
     public function getId(): ?int
     {
         return $this->id;
@@ -162,7 +164,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
+    /**
+     * @codeCoverageIgnore
+     */
     public function removeTask(Task $task): self
     {
         if ($this->tasks->removeElement($task)) {
