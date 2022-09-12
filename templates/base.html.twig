@@ -34,6 +34,13 @@
                     <a class="navbar-brand" href="{{ path('home_page') }}">To Do List app</a>
 
                     <img src="{{ asset('img/Logo_OpenClassrooms.png') }}" alt="OpenClassrooms" />
+
+                    {% if app.user %}
+                    <span class="badge bg-secondary user">Bonjour, {{ app.user.username }}
+
+                    </span>
+
+                    {% endif %}
                 </div>
             </div>
         </nav>
